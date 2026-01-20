@@ -61,6 +61,9 @@ function App() {
                   maxLength={10}
                   required
                 />
+                <span className={`char-counter ${nisn.length === 10 ? 'complete' : ''}`}>
+                  {nisn.length}/10
+                </span>
               </div>
             </div>
             <button
@@ -126,11 +129,14 @@ function App() {
           </div>
         )}
 
-        {/* Footer */}
-        <footer className="footer">
-          <p>© 2026 Admin TKA. Sistem Pencarian Sertifikat Otomatis.</p>
-        </footer>
       </div>
+      {/* Footer outside container for static positioning */}
+      <footer className="footer">
+        <p>
+          © 2026 Admin TKA.
+          <span className="footer-link">stafwakakursmansaba</span>
+        </p>
+      </footer>
     </div>
   );
 }
